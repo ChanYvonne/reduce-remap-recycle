@@ -27,10 +27,8 @@ print "total frequency of 'the', 'it', 'they':"
 print totalFreq(['the','it','they'])
 
 def mostFreq():
-    freq = map(lambda x: frequency(x), text)
-    print freq
-    word = reduce(lambda a, b: a if a > b else b, freq)
-    return word
+    answer = sorted([(w, text.count(w)) for w in set(text)], key = lambda x:x[1], reverse=True)[:1][0]
+    return answer
 
 print "most frequent word:"
 print mostFreq()
