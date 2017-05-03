@@ -1,0 +1,14 @@
+n = open("nature.txt", "r")
+text = n.read().split()
+n.close()
+
+print len(text)
+
+def frequency(word):
+    return
+
+def totalFreq(words):
+    return
+
+def mostFreq(book):
+    return
